@@ -1,110 +1,80 @@
-Awesome! Let’s give your repo a clean and developer-friendly `README.md` 🎯
 
 ---
 
-### ✅ Suggested `README.md` for your object-detection repo
-
 ```markdown
-# 📱 Real-Time Phone Detection with YOLOv8
+# 📱 Phone Detection with YOLOv8
 
-This project uses **YOLOv8** (You Only Look Once) to detect mobile phones in real-time using a webcam. Built in Python with OpenCV and Ultralytics.
-
-![Demo](https://github.com/MANOJ-BHAMARADDI/object-detection/raw/main/demo.gif) <!-- You can replace this with a real gif/screenshot later -->
+## 📌 Overview  
+This project performs real-time mobile phone detection using **YOLOv8** and your webcam. It uses OpenCV to capture frames and Ultralytics' YOLOv8 model for object detection. Built as a simple and beginner-friendly computer vision project.
 
 ---
 
 ## 🚀 Features
-
-- Real-time object detection from webcam
-- Detects `cell phones` (and other COCO objects using `yolov8n.pt`)
-- Draws bounding boxes and calculates FPS
-- Modular and beginner-friendly code
-
----
-
-## 📂 Project Structure
-
-```
-object-detection/
-├── .venv/                # Virtual environment (gitignored)
-├── phone_detector.py     # Main detection script
-├── yolov8n.pt            # Pretrained YOLOv8 Nano model
-├── best.pt               # (Optional) Your custom-trained model
-├── .gitignore            # Ignores venv, cache, etc.
-└── README.md             # You’re reading it :)
-```
+- **🧠 Real-Time Detection**: Detects phones and other common objects live through your webcam.
+- **📦 YOLOv8 Integration**: Uses Ultralytics' YOLOv8 Nano model (`yolov8n.pt`) for fast inference.
+- **📸 Webcam Feed with FPS**: Displays bounding boxes and current FPS on screen.
+- **🔁 Easily Extendable**: Train a custom model (`best.pt`) for more precise or unique detections.
 
 ---
 
-## 🛠️ Installation
+## 🛠️ Tech Stack
 
+### Core:
+- Python
+- OpenCV
+- YOLOv8 (Ultralytics)
+
+### Tools:
+- VS Code
+- Git & GitHub
+
+---
+
+## 📂 Project Setup
+
+### 1️⃣ Clone the Repository
 ```bash
-# Clone the repo
 git clone https://github.com/MANOJ-BHAMARADDI/object-detection.git
 cd object-detection
+```
 
-# Create virtual environment
+### 2️⃣ Create and Activate Virtual Environment (Recommended)
+```bash
 python -m venv .venv
-.venv\Scripts\activate   # On Windows
+.venv\Scripts\activate  # On Windows
+```
 
-# Install dependencies
+### 3️⃣ Install Dependencies
+```bash
 pip install ultralytics opencv-python
 ```
 
----
-
-## 🎯 Usage
-
+### 4️⃣ Run the Detection Script
 ```bash
 python phone_detector.py
 ```
 
-Then:
-- Hold a phone in front of your webcam 📱
-- Press `Q` to exit
+---
+
+## 🔍 Model Options
+
+- **`yolov8n.pt`**: Default pretrained model that detects general objects like `person`, `cell phone`, etc.
+- **`best.pt`** *(optional)*: Your custom-trained YOLOv8 model for specific object detection (e.g., only mobile phones).
+
+> Make sure the `.pt` file is in the project root or update the path in the script.
 
 ---
 
-## 🧠 Want to Train Your Own Model?
-
-You can collect your own dataset and train YOLOv8 with:
-
-```bash
-yolo detect train data=data.yaml model=yolov8n.pt epochs=50 imgsz=640
-```
-
-Then replace `yolov8n.pt` with your new `best.pt`.
-
 ---
 
-## 🤝 Contributing
+## 🧠 Future Improvements
+- ✅ Real-time phone detection  
+- 🚧 Custom training for brand-specific phones  
+- 🚀 Streamlit or Gradio UI for easier demos  
+- 💡 Deploy to web or desktop app
 
-Pull requests are welcome! Let’s build cool CV stuff together 🧠💡
 
----
-
-### 👨‍💻 Built with ❤️ by [Manoj Bhamaraddi](https://github.com/MANOJ-BHAMARADDI)
+### 👨‍💻 Created by [Manoj Bhamaraddi](https://github.com/MANOJ-BHAMARADDI)
 ```
 
 ---
-
-### ✅ Steps to add it to your repo:
-
-1. In VS Code, create a file called `README.md`
-2. Paste the content above.
-3. Save it.
-4. In terminal:
-
-```bash
-git add README.md
-git commit -m "Add README.md for YOLOv8 phone detection"
-git push
-```
-
----
-
-Want me to help you:
-- Record a `.gif` from your webcam output?
-- Auto-deploy this as a small app (e.g., Streamlit or Gradio)?
-
-Just say the word 💪
